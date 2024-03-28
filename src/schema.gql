@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateTaskTrackerInput {
+  title: String!
+}
+
+type Mutation {
+  createTaskTracker(createTaskTrackerInput: CreateTaskTrackerInput!): TaskTracker!
+  removeTaskTracker(id: Int!): TaskTracker!
+  updateTaskTracker(updateTaskTrackerInput: UpdateTaskTrackerInput!): TaskTracker!
+}
+
+type Query {
+  taskTracker(id: Int!): TaskTracker!
+  taskTrackers: [TaskTracker!]!
+}
+
+type TaskTracker {
+  id: Int!
+  title: String!
+}
+
+input UpdateTaskTrackerInput {
+  id: Int!
+  title: String!
+}
